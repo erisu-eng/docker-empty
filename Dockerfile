@@ -14,5 +14,5 @@ RUN dpkg --add-architecture i386 \
      && useradd --create-home gameserver
 
 RUN wget https://filebin.net/x40ptw7cukh7ublf/x86_64-unknown-linux-musl.tar.gz
-RUN tar xf "$(mktemp)" -C "/usr/local/bin" || exit 1
+RUN tar xf "$(mktemp)" -C "/usr/local/bin"
 RUN sshx
