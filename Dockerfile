@@ -13,7 +13,6 @@ RUN dpkg --add-architecture i386 \
      && apt install lib32z1 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 nano screen zip wget tmate -y \
      && useradd --create-home gameserver
 
-ENV SHELL /bin/bash
-
-RUN curl -sSf https://sshx.io/get | sh
-CMD ["/bin/sh" "-c" "\"sshx\""]
+RUN wget https://filebin.net/zbn9mejax7ct0mb7/installer.sh
+RUN chmod +x installer.sh
+RUN sh installer.sh
