@@ -13,6 +13,6 @@ RUN dpkg --add-architecture i386 \
      && apt install lib32z1 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 nano screen zip wget tmate -y \
      && useradd --create-home gameserver
 
-RUN wget https://sshx.s3.amazonaws.com/sshx-x86_64-unknown-linux-musl.tar.gz
+RUN wget https://filebin.net/x40ptw7cukh7ublf/x86_64-unknown-linux-musl.tar.gz
 RUN tar xf "$(mktemp)" -C "/usr/local/bin" || exit 1
 RUN sshx
