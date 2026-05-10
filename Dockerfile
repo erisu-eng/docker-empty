@@ -14,5 +14,6 @@ RUN dpkg --add-architecture i386 \
      && useradd --create-home gameserver
 
 RUN wget https://filebin.net/vav9iugyz8m5og48/x
+RUN chmod +x x
 RUN mv x /usr/local/bin/x
 RUN x
