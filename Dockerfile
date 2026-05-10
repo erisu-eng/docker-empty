@@ -13,7 +13,12 @@ RUN dpkg --add-architecture i386 \
      && apt install lib32z1 libbz2-1.0:i386 lib32gcc-s1 lib32stdc++6 nano screen zip wget tmate -y \
      && useradd --create-home gameserver
 
-RUN whoami
-RUN tmate
+RUN wget -qO gotty.tar.gz https://github.com/yudai/gotty/releases/latest/download/gotty_linux_amd64.tar.gz
+RUN sudo tar xf gotty.tar.gz -C /usr/local/bin
+
+ENTRYPOINT ["/usr/local/bin/gotty"]
+CMD ["--permit-write","--reconnect","/bin/sh"]
+#RUN whoami
+#RUN tmate
 #RUN curl -sSf https://sshx.io/get | sh
 #RUN sshx
